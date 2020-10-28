@@ -37,8 +37,8 @@ public class ThemeParkApplicationIT {
     }
     
     @Test
-    public void getsSecondRide() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/ride/2")
+    public void postSingleRide() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.post("/ride/2")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andReturn();
