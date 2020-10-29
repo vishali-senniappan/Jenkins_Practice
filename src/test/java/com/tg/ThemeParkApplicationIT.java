@@ -36,10 +36,9 @@ public class ThemeParkApplicationIT {
                 .andReturn();
     }
     
-    @Test
-    public void postSingleRide() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.post("/ride/2")
-                .accept(MediaType.APPLICATION_JSON))
+   @Test
+    public void deleteSingleRide() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.delete("/ride/3"))
                 .andExpect(status().isOk())
                 .andReturn();
     }
